@@ -1,0 +1,134 @@
+.container_projects{
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(-45deg, #1e1e1e, #7b3f3f, #2b2b2b);
+  animation: 
+    gradientFlow 15s ease infinite,
+    glowFilter 6s ease-in-out infinite;
+  padding: 20px 0;
+}
+
+@keyframes gradientFlow {
+  0%   { background-position:   0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position:   0% 50%; }
+}
+@keyframes glowFilter {
+  0%, 100% { filter: brightness(1) hue-rotate(0deg); }
+   50%     { filter: brightness(1.1) hue-rotate(8deg); }
+}
+
+
+.title_Projects{
+    font-family: 'Roboto';
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    position: relative;
+    display: inline-block;
+    color: var(--color_text);
+    text-shadow: 
+    1px 1px 1px rgba(0, 0, 0, 0.3),
+    2px 2px 2px var(--card-bg),
+    4px 4px 4px var(--card-bg);
+}
+
+.description_projects{
+    align-content: center;
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 500;
+    font-size: 1.1rem;
+    color: var(--color_text);
+}
+
+.project_flex{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 40px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.project_card:nth-last-child(2),
+.project_card:last-child{
+    grid-column: span 1;
+}
+
+.project_card:nth-last-child(2){
+    justify-self: end;
+}
+
+.project_card:last-child{
+    justify-self: start;
+}
+
+.project_card{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+    text-align: center;
+    width: 100%;
+    position: relative;
+    flex: 0 0 calc(33% - 20px);
+    height: 150px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+}
+
+.project_card::before{
+    content: "";
+    position: absolute;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: gray;
+    inset: 0;
+    opacity: 0.3;
+    z-index: 0;
+}
+
+.project_card:hover::before{
+    transform: scale(1.03);
+    opacity: 0.7;
+}
+
+.title_card{
+    bottom: -20px;
+    left: -12px;
+    position: absolute;
+    opacity: 0;
+    box-shadow: 0 2px 6px rgba(0,0, 0, 0.3);
+    transition: all 0.5s ease;
+}
+
+.project_card:hover .title_card{
+    left: 12px;
+    bottom: 20px;
+    opacity: 1;
+}
+
+
+.project_card img{
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.project_card h3{
+    padding: 16px;
+    font-size: 16px;
+    color: var(--color_text);
+    background-color: rgba(123, 63, 63, 0.7);
+    padding: 8px 12px;
+    border-radius: 8px;
+    display: inline-block;
+    margin: 10px auto 0;
+}

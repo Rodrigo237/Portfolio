@@ -1,0 +1,147 @@
+.background_aboutme{
+  background: linear-gradient(-45deg, #1e1e1e, #7b3f3f, #2b2b2b);
+  animation: 
+    gradientFlow 15s ease infinite,
+    glowFilter 6s ease-in-out infinite;
+  padding: 20px 0;
+}
+
+.container_aboutme {
+  display:flex;
+  align-items: flex-start;
+  max-width: 1200px;
+  gap: 40px;
+  margin: 0 auto;
+  padding: 2rem;
+  position: relative;
+  font-family: 'Roboto';
+}
+
+@keyframes gradientFlow {
+  0%   { background-position:   0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position:   0% 50%; }
+}
+@keyframes glowFilter {
+  0%, 100% { filter: brightness(1) hue-rotate(0deg); }
+   50%     { filter: brightness(1.1) hue-rotate(8deg); }
+}
+
+.title {
+    font-family: 'Roboto';
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    position: relative;
+    display: inline-block;
+    color: var(--color_text);
+    text-shadow: 
+    1px 1px 1px rgba(0, 0, 0, 0.3),
+    2px 2px 2px var(--card-bg),
+    4px 4px 4px var(--card-bg);
+}
+
+.description_aboutme {
+  font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 500;
+    font-size: 1.1rem;
+    color: var(--color_text);
+    max-width: 600px;
+}
+
+.description p {
+  margin-bottom: 1rem;
+}
+
+.school-list{
+  padding: 40px 20px;
+  max-width: 1200px;
+  width: 100%;
+  margin: auto;
+}
+
+.arrowPhoto{
+max-width: 300px;  
+max-width: 300px;
+clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.school{
+  font-family: 'Roboto';
+  font-size: 24px;
+  border-radius: 30px;
+  width: 100%;
+  margin: 15px 0;
+  padding: 18px;
+  color: var(--color_text);
+  text-align: center;
+  font-size: 16px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.school:hover{
+    animation: pulse 0.6s ease;
+}
+
+.school_description{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1200px;
+    gap: 30px;
+    font-family: 'Roboto';
+    color: var(--color_text);
+    font-size: 20px;
+    padding: 40px;
+    margin-top: 20px;
+    margin: 0 auto;
+}
+
+.school_description p{
+    max-width: 600px;
+    font-size: 20px;
+    color: var(--color_text);
+    line-height: 1.6;
+}
+
+.descriptionPhoto{
+    width: 300px;
+    height: 400px;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+
+  .container_aboutme{
+    max-width: 600px;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .school_description{
+    width: 700px;
+  }
+  
+  .description_aboutme {
+    font-size: 1rem;
+  }
+}

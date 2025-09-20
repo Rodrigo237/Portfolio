@@ -1,0 +1,155 @@
+.background_skills{
+    background-color: var(--backcolor_red);
+    justify-items: center;
+    padding-top: 20px;
+    text-align: center;
+    background: linear-gradient(-45deg, #1e1e1e, #7b3f3f, #2b2b2b);
+    animation: 
+    gradientFlow 15s ease infinite,
+    glowFilter 6s ease-in-out infinite;
+    padding: 20px 0;
+}
+
+@keyframes gradientFlow {
+  0%   { background-position:   0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position:   0% 50%; }
+}
+@keyframes glowFilter {
+  0%, 100% { filter: brightness(1) hue-rotate(0deg); }
+   50%     { filter: brightness(1.1) hue-rotate(8deg); }
+}
+
+.background_skills h1{
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    position: relative;
+    display: inline-block;
+    color: var(--color_text);
+    text-shadow: 
+    1px 1px 1px rgba(0, 0, 0, 0.3),
+    2px 2px 2px var(--card-bg),
+    4px 4px 4px var(--card-bg);
+}
+
+.skills_section{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 30px;
+    padding: 60px 20px;
+    max-width: 1000px;
+    margin: auto;
+    color:var(--color_text);
+}
+
+.skills_section h2{
+    font-size: 32px;
+    margin-bottom: 40px;
+    color: var(--color_text);
+    text-align: center;
+}
+
+.skill_item{
+    background-color: var(--backcolor_red);
+    border: 6px solid var(--color_text);
+    margin-bottom: 30px;
+    padding: 20px 25px;
+    box-shadow: 0 4px 12px rbga(0,0,0,0.1);
+}
+
+.skill_item h3{
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: var(--color_text);
+}
+
+.skill_item p{
+    font-size: 16px;
+}
+
+.skills_note{
+    align-content: center;
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 500;
+    font-size: 1.1rem;
+    color: var(--color_text);
+}
+
+.technologies_section{
+    padding: 20px 20px 40px 20px;
+    text-align: center;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.technologies_section h2{
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    position: relative;
+    display: inline-block;
+    color: var(--color_text);
+    text-shadow: 
+    1px 1px 1px rgba(0, 0, 0, 0.3),
+    2px 2px 2px var(--card-bg),
+    4px 4px 4px var(--card-bg);
+}
+
+.technologies_section p{
+    align-content: center;
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 500;
+    font-size: 1.1rem;
+    color: var(--color_text);
+}
+
+
+.techno_grid{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 30px;
+}
+
+.techno_box{
+    background-color: #1a1a1a;
+    padding: 30px 20px;
+    border-radius: 20px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease;
+}
+
+.techno_box:hover{
+    transform: scale(1.05);
+}
+
+.techno-icon{
+  display: inline-block;
+  background-color: var(--color_text);
+  color: #1a1a1a;
+  font-size: 24px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  line-height: 50px;
+  text-align: center;
+  margin-bottom: 12px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.techno-icon:hover {
+  background-color: #7b3f3f;
+  color: var(--color_text);
+  transform: scale(1.1);
+}
+
+.techno_box h3{
+    font-size: 18px;
+    color: var(--accent-color);
+    margin-top: 10px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-shadow: var(--accent-color);
+}
